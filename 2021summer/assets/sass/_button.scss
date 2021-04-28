@@ -1,0 +1,30 @@
+a.btn {
+    display: table;
+    &.btn--disabled {
+        color: $gray-300 !important;
+        background-color: $gray-500 !important;
+        cursor: not-allowed !important;
+    }
+    &.btn--blue {
+        color: $white;
+        background-color: $blue;
+        &:hover {
+            background-color: $darken-blue;
+        }
+    }
+    &.btn--yellow {
+        color: $black;
+        background-color: $yellow;
+        &:hover {
+            background-color: $darken-yellow;
+        }
+    }
+    &.btn--standard {
+        padding: 8px 18px 10px;
+        font-size: 1rem;
+    }
+    &.btn--large {
+        padding: 10px 30px 12px;
+        font-size: 1.25rem;
+    }
+}

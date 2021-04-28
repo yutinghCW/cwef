@@ -1,0 +1,137 @@
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 70px;
+	background-color: rgba($black, 0.1);
+	z-index: 3;
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	a {
+		display: block;
+		&.logo {
+			img {
+				display: block;
+				height: 40px;
+			}
+		}
+	}
+	.logo__set {
+		display: flex;
+		align-items: center;
+		> a {
+			display: block;
+			align-self: auto;
+			> img {
+				display: block;
+				width: auto;
+				height: auto;
+                @media screen and (min-width: 768px) {
+                    height: 45px;
+                }
+                @media screen and (max-width: 767px) {
+                    height: 35px;
+                }
+            }
+			&:first-child {
+				margin-right: 10px;
+			}
+		}
+	}
+	.hamburger {
+		position: relative;
+		width: 30px;
+		height: 25px;
+		z-index: 5;
+		@include breakpoint(930px) {
+			display: none;
+		}
+		span {
+			position: absolute;
+			left: 0;
+			display: block;
+			width: 30px;
+			height: 3px;
+			background-color: $black;
+			&:first-child {
+				top: 0;
+			}
+			&:nth-child(2) {
+				top: 50%;
+				@include translateY(-50%);
+			}
+			&:last-child {
+				bottom: 0;
+			}
+		}
+		&.active {
+			span {
+				&:first-child {
+					top: 50%;
+					@include rotate(-45deg);
+				}
+				&:nth-child(2) {
+					@include opacity(0);
+				}
+				&:last-child {
+					top: 50%;
+					bottom: auto;
+					@include rotate(45deg);
+				}
+			}
+		}
+	}
+	ul {
+		@include list(0, 0, none);
+		font-size: 0;
+		z-index: 3;
+		@include breakpoint(max-width 929px) {
+			display: none;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding: 100px 20px 20px;
+			background-color: rgba($yellow, 0.75);
+			backdrop-filter: blur(3px);
+		}
+		li {
+			@include breakpoint(max-width 929px) {
+				margin-bottom: 25px;
+				&:last-child {
+					display: none;
+				}
+			}
+			@include breakpoint(930px) {
+				display: inline-block;
+				margin-left: 20px;
+			}
+			@include breakpoint(1200px) {
+				margin-left: 30px;
+			}
+			a {
+				font-size: 1.125rem;
+				@include breakpoint(930px) {
+					font-size: 1rem;
+				}
+				&.btn {
+					display: block;
+				}
+				&.link {
+					color: $black;
+					&:hover {
+						color: $blue;
+					}
+				}
+			}
+		}
+	}
+}

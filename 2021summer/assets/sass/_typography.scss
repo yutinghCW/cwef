@@ -1,0 +1,18 @@
+$header-size-d: 2.875rem, 1.875rem, 1.5rem, 1.375rem, 1.125rem, 1rem;
+$header-size-m: 2.75rem, 1.75rem, 1.375rem, 1.25rem, 1.125rem, 1rem;
+@for $i from 1 through length($header-size-d) {
+    h#{$i} {
+        font-weight: 600;
+        @include breakpoint(1024px) {
+            font-weight: 500;
+        }
+    }
+    h#{$i}, .h#{$i} {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: nth($header-size-m, $i);
+        @include breakpoint(1024px) {
+            font-size: nth($header-size-d, $i);
+        }
+    }
+}
