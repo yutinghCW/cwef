@@ -1,5 +1,6 @@
-a.btn {
+a.btn, button.btn {
     display: table;
+    border-width: 0;
     &.btn--disabled {
         color: $gray-300 !important;
         background-color: $gray-500 !important;
@@ -19,6 +20,15 @@ a.btn {
             background-color: $darken-yellow;
         }
     }
+    &.btn--outlined {
+        color: $gray-300;
+        background-color: $white;
+        border: 1px solid $gray-300;
+        &:hover {
+            color: $yellow;
+            border-color: $yellow;
+        }
+    }
     &.btn--standard {
         padding: 8px 18px 10px;
         font-size: 1rem;
@@ -26,5 +36,9 @@ a.btn {
     &.btn--large {
         padding: 10px 30px 12px;
         font-size: 1.25rem;
+    }
+    .icon {
+        display: inline-block;
+        vertical-align: middle;
     }
 }

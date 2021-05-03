@@ -26,6 +26,12 @@
     justify-content: center;
     margin-left: -20px;
     margin-right: -20px;
+    &.row-between {
+        justify-content: space-between;
+    }
+    &.row-reverse {
+        flex-direction: row-reverse;
+    }
 }
 
 [class*='col-'],

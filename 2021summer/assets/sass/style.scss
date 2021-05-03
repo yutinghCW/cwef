@@ -1,7 +1,9 @@
 @import "_basic";
 @import "_general";
 @import "_sheet";
+@import "_variable";
 @import "_typography";
+@import "_embed";
 @import "_container";
 @import "_space";
 @import "_button";
@@ -14,13 +16,22 @@ section {
     .section-title {
         align-items: baseline;
         justify-content: center;
+        h1 {
+            @include breakpoint(max-width 767px) {
+                font-size: 1.875rem;
+            }
+        }
         h3 {
             color: $gray-300;
+            @include breakpoint(max-width 767px) {
+                font-size: 1.125rem;
+            }
         }
     }
     &.opening {
         position: relative;
         height: 100vh;
+        color: $gray-400;
         video {
             position: absolute;
             top: 0;
@@ -38,13 +49,23 @@ section {
             height: 100%;
             padding-top: 170px;
             padding-bottom: 100px;
-            > .img {
+            .row {
+                width: calc(100% + 40px);
+            }
+            .img {
                 width: 100%;
             }
         }
         h1 {
             img {
                 width: calc(100vw - 40px);
+                max-width: 750px;
+                @include breakpoint(768px) {
+                    width: 100%;
+                }
+                @include breakpoint(1024px) {
+                    width: 90%;
+                }
                 @include breakpoint(1200px) {
                     width: 750px;
                 }
@@ -53,11 +74,150 @@ section {
         h2 {
             img {
                 width: calc((100vw * 0.8) - 40px);
-                @include breakpoint(1200px) {
+                @include breakpoint(768px) {
                     width: 400px;
                 }
             }
         }
+    }
+    &.essence {
+        background-color: $gray;
+    }
+    &.about-detail {
+        background-color: $gray;
+    }
+    &.agenda {
+        .agenda-item {
+            border-top: 1px solid $gray-200;
+        }
+        .col-agenda-4 {
+            width: 100%;
+            @include breakpoint(1024px) {
+                width: calc(100% - 375px);
+            }
+            @include breakpoint(1200px) {
+                width: calc(100% - 425px);
+            }
+        }
+        .col-agenda-6 {
+            width: 100%;
+            @include breakpoint(1024px) {
+                width: 375px;
+            }
+            @include breakpoint(1200px) {
+                width: 425px;
+            }
+        }
+        .agenda-head {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            button {
+                .icon {
+                    padding-bottom: 2px;
+                }
+                &.active {
+                    .icon {
+                        padding-top: 2px;
+                        padding-bottom: 0;
+                        @include rotate(180deg);
+                    }
+                }
+            }
+        }
+        .agenda-body {
+            display: none;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            background-color: $gray;
+        }
+        .agenda-img {
+            position: relative;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            &.agenda-img-main {
+                width: 100%;
+                &::before {
+                    @include beforeafter('', block);
+                    width: 100%;
+                    padding-top: 62.5%;
+                    @include breakpoint(1024px) {
+                        padding-top: 56.25%;
+                    }
+                }
+            }
+            &.agenda-img-landscape {
+                @include breakpoint(max-width 1023px) {
+                    width: 100% !important;
+                    height: auto !important;
+                    &::before {
+                        @include beforeafter('', block);
+                        width: 100%;
+                        padding-top: 62.5%;
+                    }
+                }
+            }
+            &.agenda-img-verticle {
+                position: relative;
+                // height: 485px;
+                height: 375px;
+                @include breakpoint(1200px) {
+                    height: 400px;
+                }
+                @include breakpoint(max-width 1023px) {
+                    display: none;
+                }
+            }
+        }
+        .speaker-item {
+            align-items: flex-start;
+            + .speaker-item {
+                margin-top: 20px;
+            }
+            .speaker-img {
+                display: block;
+                width: 90px;
+                @include border-radius(50%);
+                @include breakpoint(1200px) {
+                    width: 120px;
+                }
+            }
+            .speaker-text {
+                position: relative;
+                @include breakpoint(1024px) {
+                    height: calc(100% - 95px);
+                    padding-bottom: 50px;
+                }
+                @include breakpoint(1200px) {
+                    height: calc(100% - 125px);
+                }
+                @include breakpoint(max-width 1023px) {
+                    width: calc(100% - 120px);
+                }
+                p {
+                    span {
+                        display: inline-block;
+                    }
+                }
+                button {
+                    @include breakpoint(1024px) {
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        @include translateX(-50%);
+                    }
+                    @include breakpoint(max-width 1023px) {
+                        padding: 5px 25px 7px;
+                    }
+                }
+            }
+        }
+
     }
     &.addr {
         background-color: $yellow;
@@ -65,10 +225,11 @@ section {
             height: 100%;
             @include breakpoint(max-width 1023px) {
                 flex-direction: column-reverse;
+                align-items: center;
             }
         }
         .traffic {
-            @include breakpoint(768px) {
+            @include breakpoint(1024px) {
                 padding-left: calc( 2.5vw + 20px);
             }
             @include breakpoint(1200px) {
@@ -85,7 +246,58 @@ section {
             border: 0;
         }
     }
+    &.register {
+        border-top: 1px solid $gray-200;
+        .card-item {
+            position: relative;
+            border: solid $gray-200;
+            @include breakpoint(1024px) {
+                border-width: 1px 1px 1px 0;
+                &:first-child {
+                    border-left-width: 1px;
+                }
+            }
+            @include breakpoint(max-width 1023px) {
+                border-width: 1px;
+            }
+            .card-head {
+                background-color: rgba($yellow, 0.1);
+                .h1 {
+                    color: $darken-yellow;
+                }
+                p {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                }
+            }
+            .card-body {
+                ul {
+                    @include list(0, 0, none);
+                    li {
+                        position: relative;
+                        display: flex;
+                        align-items: baseline;
+                        + li {
+                            margin-top: 10px;
+                        }
+                        &::before {
+                            @include beforeafter($icon-check, block);
+                            position: relative;
+                            top: 3px;
+                            padding-right: 10px;
+                            color: $yellow;
+                            font-family: $icomoon-font-family;
+                            font-size: 1.125rem;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
     &.sponsor {
+        border-top: 1px solid $gray-200;
         .section-title {
             justify-content: flex-start;
         }

@@ -50,52 +50,79 @@ $(function () {
 			$('nav > .container > ul').fadeOut();
 		});
 	}
-	$('.container-twice').each(function(){
-		let phraseHeight = $(this).children('.column-txt').children('.content').children('p').outerHeight(),
-			columnImg = $(this).children('.column-img'),
-			columnImgHeight = columnImg.outerHeight();
-		columnImg.css('padding-top', phraseHeight);
-		// columnImg.children('.img').height(columnImgHeight-phraseHeight);
-	});
-	$('.slider-center').slick({
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		autoplay: false,
-		centerMode: true,
-		centerPadding: '0',
-		prevArrow: '<button type="button" class="slick-prev"><i class="icon icon-chevron-left"></i></button>',
-		nextArrow: '<button type="button" class="slick-next"><i class="icon icon-chevron-right"></i></button>',
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 1
+	var agendaItem = '';
+	for (let f = 0; f < agenda.length; f++) {
+		switch(f) {
+			case 0:
+			case 3:
+			case 6:
+				agendaItem += '<div class="agenda-item"><div class="container agenda-head"><div class="row"><div class="col-12"><div class="row"><div class="col-md-9 col-sm-10"><div class="agenda-text"><div class="agenda-title h3 font-weight-500 my-0 text-center">' + agenda[f]["title"] + '</div><p class=" text-md-center text-left">' + agenda[f]["intro"] + '</p>';
+				if ( agenda[f]["speaker"].length > 0 ) {
+					agendaItem += '<button class="btn btn--standard btn--yellow mx-auto"> 查看講者 <i class="icon icon-chevron-down"></i></button>';
 				}
-			}
-		]
-	}).on('afterChange', function(event, slick, currentSlide, nextSlide){
-		player01.pauseVideo();
-		player02.pauseVideo();
-		player03.pauseVideo();
-		player04.pauseVideo();
-		player05.pauseVideo();
-		player06.pauseVideo();
-		player07.pauseVideo();
-		player08.pauseVideo();
-		player09.pauseVideo();
-		player10.pauseVideo();
-		$('.player').removeClass('playing');
+				agendaItem += '</div><div class="agenda-img agenda-img-main mt-md-60 mt-30"><img src="assets/images/agenda/' + agenda[f]["img-1"] + '" alt="' + agenda[f]["title"] + '"></div></div></div></div></div></div>';
+				if ( agenda[f]["speaker"].length > 0 ) {
+					agendaItem += '<div class="agenda-body"><div class="container"><div class="row">';
+					for (let g = 0; g < agenda[f]["speaker"].length; g++) {
+						agendaItem += '<div class="speaker-item display-md-block display-flex col-md-3"><img src="assets/images/speaker/' + agenda[f]["speaker"][g]["img"] + '" alt="' + agenda[f]["speaker"][g]["nameZh"] + '" class="speaker-img mx-auto"><div class="speaker-text text-md-center"><div class="h3 mt-md-5 my-0 serif font-weight-700 display-md-block display-inline-block">' + agenda[f]["speaker"][g]["nameZh"] + '</div><div class="h3 my-0 pl-md-0 pl-10 serif font-weight-700 display-md-block display-inline-block">' + agenda[f]["speaker"][g]["nameEn"] + '</div><p class="mt-md-10 mt-5 mb-md-20 mb-10">' + agenda[f]["speaker"][g]["titleZh"] + '</p><button class="speaker-more btn btn--standard btn--outlined mx-md-auto serif font-weight-700" data-name="' + agenda[f]["speaker"][g]["nameZh"] + '">MORE</button></div></div>';
+					}
+					agendaItem += '</div></div></div>';
+					agendaItem += '</div>';
+				}
+				break;
+			case 1:
+			case 4:
+			case 7:
+				agendaItem += '<div class="agenda-item"><div class="container agenda-head"><div class="row"><div class="col-md-9 col-sm-10"><div class="row"><div class="col-agenda-4"><div class="agenda-text"><div class="agenda-title h3 font-weight-500 my-0 text-md-left text-center">' + agenda[f]["title"] + '</div><p>' + agenda[f]["intro"] + '</p>';
+				if ( agenda[f]["speaker"].length > 0 ) {
+					agendaItem += '<button class="btn btn--standard btn--yellow mx-auto"> 查看講者 <i class="icon icon-chevron-down"></i></button>';
+				}
+				agendaItem += '</div><div class="agenda-img agenda-img-landscape mt-md-60 mt-30"><img src="assets/images/agenda/' + agenda[f]["img-1"] + '" alt="' + agenda[f]["title"] + '"></div></div><div class="col-agenda-6"><div class="agenda-img agenda-img-verticle"><img src="assets/images/agenda/' + agenda[f]["img-2"] + '" alt="' + agenda[f]["title"] + '"></div></div></div></div></div></div>';
+				if ( agenda[f]["speaker"].length > 0 ) {
+					agendaItem += '<div class="agenda-body"><div class="container"><div class="row">';
+					for (let g = 0; g < agenda[f]["speaker"].length; g++) {
+						agendaItem += '<div class="speaker-item display-md-block display-flex col-md-3"><img src="assets/images/speaker/' + agenda[f]["speaker"][g]["img"] + '" alt="' + agenda[f]["speaker"][g]["nameZh"] + '" class="speaker-img mx-auto"><div class="speaker-text text-md-center"><div class="h3 mt-md-5 my-0 serif font-weight-700 display-md-block display-inline-block">' + agenda[f]["speaker"][g]["nameZh"] + '</div><div class="h3 my-0 pl-md-0 pl-10 serif font-weight-700 display-md-block display-inline-block">' + agenda[f]["speaker"][g]["nameEn"] + '</div><p class="mt-md-10 mt-5 mb-md-20 mb-10">' + agenda[f]["speaker"][g]["titleZh"] + '</p><button class="speaker-more btn btn--standard btn--outlined mx-md-auto serif font-weight-700" data-name="' + agenda[f]["speaker"][g]["nameZh"] + '">MORE</button></div></div>';
+					}
+					agendaItem += '</div></div></div>';
+					agendaItem += '</div>';
+				}
+				break;
+			case 2:
+			case 5:
+			case 8:
+				agendaItem += '<div class="agenda-item"><div class="container agenda-head"><div class="row"><div class="col-md-9 col-sm-10 text-center"><div class="row row-reverse"><div class="col-agenda-4 text-left"><div class="agenda-text"><div class="agenda-title h3 font-weight-500 my-0 text-md-left text-center">' + agenda[f]["title"] + '</div><p>' + agenda[f]["intro"] + '</p>';
+				if ( agenda[f]["speaker"].length > 0 ) {
+					agendaItem += '<button class="btn btn--standard btn--yellow mx-auto"> 查看講者 <i class="icon icon-chevron-down"></i></button>';
+				}
+				agendaItem += '</div><div class="agenda-img agenda-img-landscape mt-md-60 mt-30"><img src="assets/images/agenda/' + agenda[f]["img-1"] + '" alt="' + agenda[f]["title"] + '"></div></div><div class="col-agenda-6"><div class="agenda-img agenda-img-verticle"><img src="assets/images/agenda/' + agenda[f]["img-2"] + '" alt="' + agenda[f]["title"] + '"></div></div></div></div></div></div>';
+				if ( agenda[f]["speaker"].length > 0 ) {
+					agendaItem += '<div class="agenda-body"><div class="container"><div class="row">';
+					for (let g = 0; g < agenda[f]["speaker"].length; g++) {
+						agendaItem += '<div class="speaker-item display-md-block display-flex col-md-3"><img src="assets/images/speaker/' + agenda[f]["speaker"][g]["img"] + '" alt="' + agenda[f]["speaker"][g]["nameZh"] + '" class="speaker-img mx-auto"><div class="speaker-text text-md-center"><div class="h3 mt-md-5 my-0 serif font-weight-700 display-md-block display-inline-block">' + agenda[f]["speaker"][g]["nameZh"] + '</div><div class="h3 my-0 pl-md-0 pl-10 serif font-weight-700 display-md-block display-inline-block">' + agenda[f]["speaker"][g]["nameEn"] + '</div><p class="mt-md-10 mt-5 mb-md-20 mb-10">' + agenda[f]["speaker"][g]["titleZh"] + '</p><button class="speaker-more btn btn--standard btn--outlined mx-md-auto serif font-weight-700" data-name="' + agenda[f]["speaker"][g]["nameZh"] + '">MORE</button></div></div>';
+					}
+					agendaItem += '</div></div></div>';
+					agendaItem += '</div>';
+				}
+				break;
+			default:
+		}
+	}
+	$('#agenda').html(agendaItem);
+	$('.agenda-img-landscape').each(function(){
+		let textHeight = $(this).siblings('.agenda-text').outerHeight(),
+			columnImg = $(this).parent('.col-agenda-4').siblings('.col-agenda-6').children('.agenda-img-verticle').outerHeight();
+		console.log(textHeight, columnImg);
+		$(this).css('height', (columnImg-textHeight-60));
+		$(this).css('width', (columnImg-textHeight-60)*1.33333333);
 	});
-	$('.agenda .content button').each(function(){
-		let related = $(this).attr('data-relate');
+	$('.agenda-text button').each(function(){
 		$(this).click(function(){
-			let agendaTop =  $(this).parent('.content').parent('.column').parent('.container').parent('.agenda').offset().top,
-				agendaHeight = $(this).parent('.content').parent('.column').parent('.container').parent('.agenda').outerHeight(),
-				speakerTop = agendaTop + agendaHeight;
+			let agendaHeadTop =  $(this).parent().parent().parent().parent().parent().parent('.agenda-head').offset().top,
+				agendaHeadHeight =  $(this).parent().parent().parent().parent().parent().parent('.agenda-head').outerHeight();
 			$(this).toggleClass('active');
-			$('.' + related).slideToggle();
+			$(this).parent().parent().parent().parent().parent().parent('.agenda-head').siblings('.agenda-body').slideToggle();
 			$('html,body').animate({
-				scrollTop: speakerTop - (height / 3)
+				scrollTop: (agendaHeadTop+agendaHeadHeight) - (height / 4)
 			}, 1000);
 		});
 	});
@@ -124,12 +151,6 @@ $(function () {
     $('.message').click(function() {
         $('.message').fadeOut();;
     })
-	$('.player').each(function () {
-		var y2bId = $(this).attr('data-youtube');
-		$(this).click(function () {
-			$(this).addClass('playing');
-		})
-	})
 	$('.input-inline i.icon').click(function(){
 		$(this).siblings('input').attr('type',
 			$(this).siblings('input').attr('type')==='password'?'text':'password'
@@ -145,102 +166,3 @@ $(function () {
 		}
 	});
 });
-
-var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-var player01, player02, player03, player04, player05, player06, player07, player08, player09, player10;
-function onYouTubeIframeAPIReady() {
-	player01 = new YT.Player('youtube01', {
-		fitToBackground: true,
-		width: '100%',
-		videoId: 'tom94M5VGN0',
-		playerVars: { 'playsinline': 1, 'rel': 0, 'showinfo': 0 },
-	});
-	player02 = new YT.Player('youtube02', {
-		fitToBackground: true,
-		width: '100%',
-		videoId: 'SLa45iSQEdw',
-		playerVars: { 'playsinline': 1, 'rel': 0, 'showinfo': 0 },
-	});
-	player03 = new YT.Player('youtube03', {
-		fitToBackground: true,
-		width: '100%',
-		videoId: '5xNX0YyAQC4',
-		playerVars: { 'playsinline': 1, 'rel': 0, 'showinfo': 0 },
-	});
-	player04 = new YT.Player('youtube04', {
-		fitToBackground: true,
-		width: '100%',
-		videoId: 'hiN3oDczEww',
-		playerVars: { 'playsinline': 1, 'rel': 0, 'showinfo': 0 },
-	});
-	player05 = new YT.Player('youtube05', {
-		fitToBackground: true,
-		width: '100%',
-		videoId: 'fZZaz3LSocU',
-		playerVars: { 'playsinline': 1, 'rel': 0, 'showinfo': 0 },
-	});
-	player06 = new YT.Player('youtube06', {
-		fitToBackground: true,
-		width: '100%',
-		videoId: 'FHJEVkUjDF0',
-		playerVars: { 'playsinline': 1, 'rel': 0, 'showinfo': 0 },
-	});
-	player07 = new YT.Player('youtube07', {
-		fitToBackground: true,
-		width: '100%',
-		videoId: 'KNZ3Fpd1R4o',
-		playerVars: { 'playsinline': 1, 'rel': 0, 'showinfo': 0 },
-	});
-	player08 = new YT.Player('youtube08', {
-		fitToBackground: true,
-		width: '100%',
-		videoId: '70TyzqU3bkI',
-		playerVars: { 'playsinline': 1, 'rel': 0, 'showinfo': 0 },
-	});
-	player09 = new YT.Player('youtube09', {
-		fitToBackground: true,
-		width: '100%',
-		videoId: '9FCpi-DoV30',
-		playerVars: { 'playsinline': 1, 'rel': 0, 'showinfo': 0 },
-	});
-	player10 = new YT.Player('youtube10', {
-		fitToBackground: true,
-		width: '100%',
-		videoId: 'NZ5XdG6vr0s',
-		playerVars: { 'playsinline': 1, 'rel': 0, 'showinfo': 0 },
-	});
-}
-function play01() { 
-	player01.playVideo();
-}
-function play02() { 
-	player02.playVideo();
-}
-function play03() { 
-	player03.playVideo();
-}
-function play04() { 
-	player04.playVideo();
-}
-function play05() { 
-	player05.playVideo();
-}
-function play06() { 
-	player06.playVideo();
-}
-function play07() { 
-	player07.playVideo();
-}
-function play08() { 
-	player08.playVideo();
-}
-function play09() { 
-	player09.playVideo();
-}
-function play10() { 
-	player10.playVideo();
-}
