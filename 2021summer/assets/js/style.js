@@ -1,7 +1,7 @@
 $(function () {
 	var width = $(window).width(),
 		height = $(window).height(),
-		headerHeight = $('nav').outerHeight();
+		headerHeight = $('header').outerHeight();
 	var iPhone = (navigator.userAgent.match(/iPhone/i) != null) || (navigator.userAgent.match(/iPod/i) != null);
 	var android = (navigator.userAgent.match(/android/i) != null);
 	var iPad = navigator.userAgent.match(/iPad/i) != null;
