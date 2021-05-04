@@ -1,4 +1,4 @@
-nav {
+header {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -8,7 +8,13 @@ nav {
 	justify-content: center;
 	height: 70px;
 	background-color: rgba($black, 0.1);
+	border-bottom: 1px solid transparent;
 	z-index: 3;
+	&.scroll {
+		background-color: rgba($white, 0.95);
+		border-bottom-color: $gray-200;
+		backdrop-filter: blur(3px);
+	}
 	.container {
 		display: flex;
 		align-items: center;
@@ -24,8 +30,10 @@ nav {
 		}
 	}
 	.logo__set {
+		position: relative;
 		display: flex;
 		align-items: center;
+		z-index: 4;
 		> a {
 			display: block;
 			align-self: auto;
@@ -88,47 +96,48 @@ nav {
 			}
 		}
 	}
-	ul {
-		@include list(0, 0, none);
+	nav {
 		font-size: 0;
 		z-index: 3;
 		@include breakpoint(max-width 929px) {
 			display: none;
 			position: fixed;
 			top: 0;
-			bottom: 0;
 			left: 0;
-			right: 0;
-			padding: 100px 20px 20px;
-			background-color: rgba($yellow, 0.75);
-			backdrop-filter: blur(3px);
+			width: 100%;
+			height: 100vh;
+			padding: 100px 70px 20px 20px;
+			background-color: rgba($white, 0.95);
 		}
-		li {
-			@include breakpoint(max-width 929px) {
-				margin-bottom: 25px;
-				&:last-child {
-					display: none;
+		ul {
+			@include list(0, 0, none);
+			li {
+				@include breakpoint(max-width 929px) {
+					margin-bottom: 25px;
+					&:last-child {
+						display: none;
+					}
 				}
-			}
-			@include breakpoint(930px) {
-				display: inline-block;
-				margin-left: 20px;
-			}
-			@include breakpoint(1200px) {
-				margin-left: 30px;
-			}
-			a {
-				font-size: 1.125rem;
 				@include breakpoint(930px) {
-					font-size: 1rem;
+					display: inline-block;
+					margin-left: 20px;
 				}
-				&.btn {
-					display: block;
+				@include breakpoint(1200px) {
+					margin-left: 30px;
 				}
-				&.link {
-					color: $black;
-					&:hover {
-						color: $blue;
+				a {
+					font-size: 1.125rem;
+					@include breakpoint(930px) {
+						font-size: 1rem;
+					}
+					&.btn {
+						display: block;
+					}
+					&.link {
+						color: $black;
+						&:hover {
+							color: $blue;
+						}
 					}
 				}
 			}

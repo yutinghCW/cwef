@@ -1,6 +1,13 @@
 @import "_basic";
 @import "_general";
 @import "_sheet";
+
+@each $color, $value in $colors {
+	.color-#{$color} {
+		color: $value;
+	}
+}
+
 @import "_variable";
 @import "_typography";
 @import "_embed";
@@ -11,8 +18,12 @@
 @import "_footer";
 
 section {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include breakpoint(1024px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
     .section-title {
         align-items: baseline;
         justify-content: center;
@@ -82,6 +93,7 @@ section {
     }
     &.essence {
         background-color: $gray;
+        @import "_slider";
     }
     &.about-detail {
         background-color: $gray;
@@ -109,8 +121,12 @@ section {
             }
         }
         .agenda-head {
-            padding-top: 80px;
-            padding-bottom: 80px;
+            padding-top: 60px;
+            padding-bottom: 60px;
+            @include breakpoint(1024px) {
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
             button {
                 .icon {
                     padding-bottom: 2px;
@@ -126,9 +142,13 @@ section {
         }
         .agenda-body {
             display: none;
-            padding-top: 80px;
-            padding-bottom: 80px;
+            padding-top: 60px;
+            padding-bottom: 60px;
             background-color: $gray;
+            @include breakpoint(1024px) {
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
         }
         .agenda-img {
             position: relative;

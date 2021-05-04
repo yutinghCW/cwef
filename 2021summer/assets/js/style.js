@@ -43,13 +43,30 @@ $(function () {
 	if (width < 930) {
 		$('.hamburger').click(function(){
 			$(this).toggleClass('active');
-			$('nav > .container > ul').fadeToggle();
+			$('header > .container > nav').fadeToggle();
 		});
-		$('nav > .container > ul > li > a').click(function(){
+		$('header > .container > nav > ul > li > a').click(function(){
 			$('.hamburger').removeClass('active');
-			$('nav > .container > ul').fadeOut();
+			$('header > .container > nav').fadeOut();
 		});
 	}
+	$('.slider-center').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		autoplay: false,
+		centerMode: true,
+		centerPadding: '0',
+		prevArrow: '<button type="button" class="slick-prev"><i class="icon icon-chevron-left"></i></button>',
+		nextArrow: '<button type="button" class="slick-next"><i class="icon icon-chevron-right"></i></button>',
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
+	});
 	var agendaItem = '';
 	for (let f = 0; f < agenda.length; f++) {
 		switch(f) {
@@ -111,7 +128,6 @@ $(function () {
 	$('.agenda-img-landscape').each(function(){
 		let textHeight = $(this).siblings('.agenda-text').outerHeight(),
 			columnImg = $(this).parent('.col-agenda-4').siblings('.col-agenda-6').children('.agenda-img-verticle').outerHeight();
-		console.log(textHeight, columnImg);
 		$(this).css('height', (columnImg-textHeight-60));
 		$(this).css('width', (columnImg-textHeight-60)*1.33333333);
 	});

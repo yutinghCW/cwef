@@ -25,3 +25,13 @@ $google: #EA4335 !default;
 $instagram: #b900b4 !default;
 $line: #00C200 !default;
 $rss: #FF5700 !default;
+
+$colors: () !default;
+$colors: map-merge((
+    "primary": $primary,
+    "yellow": $yellow,
+    "blue": $blue,
+    "darken-yellow": $darken-yellow,
+    "darken-blue": $darken-blue
+    ), $colors
+);

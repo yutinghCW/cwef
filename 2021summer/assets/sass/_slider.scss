@@ -1,0 +1,90 @@
+.slider-center {
+    @include breakpoint(1024px) {
+        padding-left: 65px;
+        padding-right: 65px;
+        overflow: hidden;
+    }
+    h3 {
+        color: $white;
+        font-weight: normal;
+    }
+    .slick-track {
+        @include breakpoint(1024px) {
+            padding-top: 5%;
+        }
+        @include breakpoint(max-width 1023px) {
+            padding-bottom: 90px;
+        }
+    }
+    .slick-prev, .slick-next {
+        position: absolute;
+        padding: 9px;
+        color: $black;
+        background-color: $white;
+        border: 0;
+        outline: 0;
+        @include border-radius(50%);
+        z-index: 2;
+        @include breakpoint(1024px) {
+            top: 50%;
+            margin-top: -25px; // 姓名職稱高度的一半
+            @include translateY(-50%);
+        }
+        @include breakpoint(max-width 1023px) {
+            bottom: 0;
+        }
+        i {
+            display: block;
+            font-size: 2rem;
+        }
+    }
+    .slick-prev {
+        @include breakpoint(1024px) {
+            left: 0;
+        }
+        @include breakpoint(max-width 1023px) {
+            left: calc(50% - 50px - 20px);
+        }
+    }
+    .slick-next {
+        @include breakpoint(1024px) {
+            right: 0;
+        }
+        @include breakpoint(max-width 1023px) {
+            right: calc(50% - 50px - 20px);
+        }
+    }
+    .slick-slide {
+        outline: 0;
+        @include breakpoint(1024px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        img {
+            @include transition(transform 0.5s);
+        }
+        .h4 {
+            @include transition(opacity 0.3s);
+            @include breakpoint(1024px) {
+                @include opacity(0);
+            }
+        }
+        &.slick-center {
+            position: relative;
+            z-index: 4;
+            img {
+                @include breakpoint(1024px) {
+                    @include scale(1.5);
+                }
+            }
+            .h4 {
+                @include breakpoint(1024px) {
+                    margin-left: -70px;
+                    margin-right: -70px;
+                    padding-top: calc(12% + 20px);
+                    @include opacity(1);
+                }
+            }
+        }
+    }
+}
