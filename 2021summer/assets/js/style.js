@@ -54,6 +54,8 @@ $(function () {
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		autoplay: true,
+		pauseOnFocus: false,
+		pauseOnHover: false,
 		centerMode: true,
 		centerPadding: '0',
 		prevArrow: '<button type="button" class="slick-prev"><i class="icon icon-chevron-left"></i></button>',
