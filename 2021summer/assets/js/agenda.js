@@ -3,28 +3,28 @@ var agenda = [{
     "intro": "疫情控管得當，意外讓台灣吸引一批白領創意人才，為台灣帶來更多元的面貌與可能，也讓這批人才，以台灣為舞台不因疫情中斷發揮創意與價值的可能。他們看好台灣什麼？預備在台灣做些什麼？",
     "img-1": "1-1.jpg",
     "img-2": "1-2.jpg",
-    // "speaker": []
-    "speaker": [{
-        "nameZh": "郭水義",
-        "nameEn": "Shui Yi Kuo",
-        "titleZh": "</span>中華電信股份有限公司</span><span>總經理</span>",
-        "img": "2-1-kao.jpg"
-    },{
-        "nameZh": "埃敏",
-        "nameEn": "Tareq Amin",
-        "titleZh": "</span>樂天移動董事、</span><span>副總裁兼科技長</span>",
-        "img": "2-2-amin.jpg"
-    },{
-        "nameZh": "王煒",
-        "nameEn": "James Wang",
-        "titleZh": "中磊電子總經理",
-        "img": "2-3-wang.jpg",
-    },{
-        "nameZh": "汪佳慧",
-        "nameEn": "Grace Wang",
-        "titleZh": "</span>英特爾公司業務行銷</span><span>暨公關事業群副總裁</span>",
-        "img": "2-4-wang.jpg"
-    }]
+    "speaker": []
+    // "speaker": [{
+    //     "nameZh": "郭水義",
+    //     "nameEn": "Shui Yi Kuo",
+    //     "titleZh": "</span>中華電信股份有限公司</span><span>總經理</span>",
+    //     "img": "2-1-kao.jpg"
+    // },{
+    //     "nameZh": "埃敏",
+    //     "nameEn": "Tareq Amin",
+    //     "titleZh": "</span>樂天移動董事、</span><span>副總裁兼科技長</span>",
+    //     "img": "2-2-amin.jpg"
+    // },{
+    //     "nameZh": "王煒",
+    //     "nameEn": "James Wang",
+    //     "titleZh": "中磊電子總經理",
+    //     "img": "2-3-wang.jpg",
+    // },{
+    //     "nameZh": "汪佳慧",
+    //     "nameEn": "Grace Wang",
+    //     "titleZh": "</span>英特爾公司業務行銷</span><span>暨公關事業群副總裁</span>",
+    //     "img": "2-4-wang.jpg"
+    // }]
 },{
     "title": "議題二─移動新可能",
     "intro": "無論兩輪還是四輪，電動車已經成為全球新顯學。疫後電動車生態系將帶給我們新面貌？台灣有什麼機會？",
