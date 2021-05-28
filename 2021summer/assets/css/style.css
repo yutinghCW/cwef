@@ -4893,7 +4893,7 @@ section .section-title h3 {
 }
 section.opening {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   color: #595757;
 }
 section.opening video {
