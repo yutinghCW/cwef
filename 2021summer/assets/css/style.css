@@ -4707,6 +4707,9 @@ header.scroll {
   border-bottom-color: #dddddd;
   backdrop-filter: blur(3px);
 }
+header.scroll .logo__set {
+  padding-bottom: 0;
+}
 header.scroll .logo__set > img {
   display: none;
 }

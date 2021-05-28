@@ -17,6 +17,7 @@ header {
 		border-bottom-color: $gray-200;
 		backdrop-filter: blur(3px);
 		.logo__set {
+			padding-bottom: 0;
 			> img {
 				display: none;
 			}
