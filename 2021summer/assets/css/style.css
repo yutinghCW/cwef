@@ -4692,15 +4692,23 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70px;
+  height: 90px;
   background-color: rgba(23, 23, 23, 0.1);
   border-bottom: 1px solid transparent;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
   z-index: 3;
 }
 header.scroll {
+  height: 70px;
   background-color: rgba(255, 255, 255, 0.95);
   border-bottom-color: #dddddd;
   backdrop-filter: blur(3px);
+}
+header.scroll .logo__set > img {
+  display: none;
 }
 header .container {
   display: flex;
@@ -4717,6 +4725,7 @@ header a.logo img {
 header .logo__set {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   z-index: 4;
 }

@@ -6,14 +6,21 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 70px;
+	height: 90px;
 	background-color: rgba($black, 0.1);
 	border-bottom: 1px solid transparent;
+	@include transition(all 0.1s);
 	z-index: 3;
 	&.scroll {
+		height: 70px;
 		background-color: rgba($white, 0.95);
 		border-bottom-color: $gray-200;
 		backdrop-filter: blur(3px);
+		.logo__set {
+			> img {
+				display: none;
+			}
+		}
 	}
 	.container {
 		display: flex;
@@ -32,6 +39,7 @@ header {
 	.logo__set {
 		position: relative;
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		z-index: 4;
 		> a {
