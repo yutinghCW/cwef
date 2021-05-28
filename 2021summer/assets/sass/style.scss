@@ -41,7 +41,7 @@ section {
     }
     &.opening {
         position: relative;
-        min-height: 100vh;
+        height: 100vh;
         color: $gray-400;
         video {
             position: absolute;
