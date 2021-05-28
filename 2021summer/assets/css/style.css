@@ -4938,7 +4938,7 @@ section.opening h1 img {
     width: 50%;
   }
 }
-@media screen and (max-height: 700px) and (min-width: 1200px) {
+@media screen and (max-height: 850px) and (min-width: 1200px) {
   section.opening h1 img {
     width: 40%;
   }
