@@ -4727,6 +4727,7 @@ header .logo__set {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding-bottom: 20px;
   z-index: 4;
 }
 header .logo__set > a {
@@ -4750,6 +4751,11 @@ header .logo__set > a > img {
 }
 header .logo__set > a:first-child {
   margin-right: 10px;
+}
+header .logo__set > img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 header .hamburger {
   position: relative;
