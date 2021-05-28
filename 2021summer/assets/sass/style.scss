@@ -68,7 +68,7 @@ section {
         }
         h1 {
             img {
-                width: calc(100vw - 40px);
+                width: calc(100vw - 60px);
                 max-width: 550px;
                 @include breakpoint(768px) {
                     width: 100%;
@@ -78,6 +78,9 @@ section {
                 }
                 @include breakpoint(1200px) {
                     width: 50%;
+                }
+                @media screen and (max-height: 700px) and (min-width: 1200px) {
+                    width: 40%;
                 }
             }
         }

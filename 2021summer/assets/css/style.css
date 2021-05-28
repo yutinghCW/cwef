@@ -4920,7 +4920,7 @@ section.opening .container .img {
   width: 100%;
 }
 section.opening h1 img {
-  width: calc(100vw - 40px);
+  width: calc(100vw - 60px);
   max-width: 550px;
 }
 @media (min-width: 768px) {
@@ -4936,6 +4936,11 @@ section.opening h1 img {
 @media (min-width: 1200px) {
   section.opening h1 img {
     width: 50%;
+  }
+}
+@media screen and (max-height: 700px) and (min-width: 1200px) {
+  section.opening h1 img {
+    width: 40%;
   }
 }
 section.opening h2 img {
