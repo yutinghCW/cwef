@@ -58,8 +58,12 @@ section {
             align-items: center;
             justify-content: center;
             height: 100%;
-            padding-top: 170px;
-            padding-bottom: 100px;
+            padding-top: 85px;
+            padding-bottom: 50px;
+            @include breakpoint(1200px) {
+                padding-top: 170px;
+                padding-bottom: 100px;
+            }
             .row {
                 width: calc(100% + 40px);
             }
@@ -70,15 +74,15 @@ section {
         h1 {
             img {
                 width: calc(100vw - 40px);
-                max-width: 750px;
+                max-width: 550px;
                 @include breakpoint(768px) {
                     width: 100%;
                 }
                 @include breakpoint(1024px) {
-                    width: 90%;
+                    width: 65%;
                 }
                 @include breakpoint(1200px) {
-                    width: 750px;
+                    width: 50%;
                 }
             }
         }
