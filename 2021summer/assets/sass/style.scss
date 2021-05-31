@@ -272,13 +272,18 @@ section {
         border-top: 1px solid $gray-200;
         .card-item {
             position: relative;
-            border: 1px solid $gray-200;
-            align-items: center;
+            border: solid $gray-200;
+            @include breakpoint(1024px) {
+                border-width: 1px 1px 1px 0;
+                &:first-child {
+                    border-left-width: 1px;
+                }
+            }
+            @include breakpoint(max-width 1023px) {
+                border-width: 1px;
+            }
             .card-head {
                 background-color: rgba($yellow, 0.1);
-                @include breakpoint(1024px) {
-                    border-right: 1px solid $gray-200;
-                }
                 .h1 {
                     color: $darken-yellow;
                 }

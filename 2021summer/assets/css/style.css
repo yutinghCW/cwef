@@ -5291,16 +5291,23 @@ section.register {
 }
 section.register .card-item {
   position: relative;
-  border: 1px solid #dddddd;
-  align-items: center;
+  border: solid #dddddd;
+}
+@media (min-width: 1024px) {
+  section.register .card-item {
+    border-width: 1px 1px 1px 0;
+  }
+  section.register .card-item:first-child {
+    border-left-width: 1px;
+  }
+}
+@media (max-width: 1023px) {
+  section.register .card-item {
+    border-width: 1px;
+  }
 }
 section.register .card-item .card-head {
   background-color: rgba(247, 197, 54, 0.1);
-}
-@media (min-width: 1024px) {
-  section.register .card-item .card-head {
-    border-right: 1px solid #dddddd;
-  }
 }
 section.register .card-item .card-head .h1 {
   color: #f7ac26;
