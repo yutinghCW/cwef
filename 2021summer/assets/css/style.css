@@ -581,6 +581,9 @@ h6, .h6 {
 .row.row-between {
   justify-content: space-between;
 }
+.row.align-center {
+  align-items: center;
+}
 .row.row-start {
   justify-content: flex-start;
 }

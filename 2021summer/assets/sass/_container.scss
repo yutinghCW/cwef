@@ -29,6 +29,9 @@
     &.row-between {
         justify-content: space-between;
     }
+    &.align-center {
+        align-items: center;
+    }
     &.row-start {
         justify-content: flex-start;
     }
