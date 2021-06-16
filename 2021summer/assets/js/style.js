@@ -88,6 +88,7 @@ $(function () {
 					agendaItem += '</div></div></div>';
 					agendaItem += '</div>';
 				}
+				agendaItem += '</div></div>';
 				break;
 			case 1:
 			case 4:
@@ -105,6 +106,7 @@ $(function () {
 					agendaItem += '</div></div></div>';
 					agendaItem += '</div>';
 				}
+				agendaItem += '</div></div>';
 				break;
 			case 2:
 			case 5:
@@ -122,6 +124,8 @@ $(function () {
 					agendaItem += '</div></div></div>';
 					agendaItem += '</div>';
 				}
+				agendaItem += '</div>';
+				agendaItem += '</div></div>';
 				break;
 			default:
 		}
