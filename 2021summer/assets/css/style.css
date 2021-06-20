@@ -5297,8 +5297,10 @@ section.agenda .agenda-img.agenda-img-verticle {
 section.agenda .speaker-item {
   align-items: flex-start;
 }
-section.agenda .speaker-item + .speaker-item {
-  margin-top: 20px;
+@media (max-width: 1023px) {
+  section.agenda .speaker-item + .speaker-item {
+    margin-top: 20px;
+  }
 }
 section.agenda .speaker-item .speaker-img {
   display: block;
