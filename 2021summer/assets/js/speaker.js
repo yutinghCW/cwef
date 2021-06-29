@@ -40,4 +40,53 @@ var data = [{
     "titleEn": "CEO & Co- Founder, Just Kitchen Holdings Crop.",
     "img": "jason-chen.jpg",
     "intro": "在國際資本市場和私募股權領域有超過二十年的經驗，陳星豪共同創辦 Just Kitchen，他曾任多間加拿大投資代理商的資深執行專務和董事管理階層，擁有豐富的資本市場經驗。陳星豪擁有法學博士、經濟學和哲學學位。"
+},{
+    "nameZh": "劉文雄",
+    "nameEn": "Edwin Liu",
+    "titleZh": "工業技術研究院院長",
+    "titleEn": "President, Industrial Technology Research Institute",
+    "img": "edwin-liu.jpg",
+    "intro": "現任工研院院長，劉文雄帶領工研院擘畫「2030 技術策略與藍圖」，以「智慧生活」、「健康樂活」、「永續環境」三大應用領域與「智慧化致能技術」的研發方向，攜手產業共創新局。面對氣候變遷的挑戰，劉文雄推動「淨零永續策略辦公室」，跨領域整合產業的創新和研發，協助臺灣產業綠色轉型，提升全球競爭力，掌握全球零碳排放的新商機。"
+},{
+    "nameZh": "蔡朝安",
+    "nameEn": "Eric Tsai",
+    "titleZh": "普華商務法律事務所主持律師",
+    "titleEn": "Managing Partner, PricewaterhouseCoopers Legal (PwC legal)",
+    "img": "eric-tsai.jpg",
+    "intro": "現任普華商務法律事務所主持律師，蔡朝安曾任資誠聯合會計師事務所法律暨稅務服務副營運長、中華民國律師公會全國聯合會理事、台北律師公會金融財稅中心委員會主任委員、中華民國工業總會智慧財產權委員會委員等職務。蔡朝安具中華民國律師、中華民國專利師及美國紐約州律師資格。"
+},{
+    "nameZh": "邱鈞榮",
+    "nameEn": "George Chiou",
+    "titleZh": "中菲行國際物流股份有限公司空運總裁（經營委員會）",
+    "titleEn": "President, Air Freight, EMB, Dimerco Express Corporation",
+    "img": "george-chiou.jpg",
+    "intro": "超過三十年海空運經驗，邱鈞榮現任中菲行空運總裁，領導空運事業團隊，以及集團大數據分析追蹤績效，創造中菲行絕佳業績。在 2018 年加入中菲行之前，邱鈞榮曾任長榮海運、長榮航空及長榮空運倉儲，工作地點遍布英國、新加坡、上海等地區，帶領團隊開發業務，績效卓越。"
+},{
+    "nameZh": "蔡裕慶",
+    "nameEn": "Kim Y.C.Tsai",
+    "titleZh": "車王電子股份有限公司董事長",
+    "titleEn": "Chairman & CEO, Mobiletron electronics CO.,LTD.",
+    "img": "kim-tsai.jpg",
+    "intro": "蔡裕慶創立車王電子，為台灣首家汽車引擎電子控制模組廠，由零組件一路發展 IoV、ADAS、鋰電池 EMS 模組，再轉型升級做電動巴士整車及自動駕駛巴士製造。如今以電動商用車為平台，藉由台灣 ICT 產業優勢，將電動巴士產業建構為一個龐大產業生態系。曾任經濟部顧問及磐石會會長。現任台灣智慧電動車及綠能科技協會理事長。"
+},{
+    "nameZh": "胡書賓",
+    "nameEn": "Samson Hu",
+    "titleZh": "華碩電腦共同執行長",
+    "titleEn": "CO-CEO, ASUS",
+    "img": "samson-hu.jpg",
+    "intro": "現任華碩電腦共同執行長，胡書賓具備科技宏觀視野及敏銳洞見，以卓越領導能力，帶領華碩開創許多革命性經典產品，奠定全球領先的品牌地位。更以準、穩、精、速的營運管理，深耕產品、品質與服務，帶領團隊達成目標，並積極實踐華碩品牌使命與願景，讓華碩成為數位新世代備受推崇的科技創新領導企業。"
+},{
+    "nameZh": "劉思泰",
+    "nameEn": "ST Liew",
+    "titleZh": "高通副總裁暨台灣與東南亞區總裁",
+    "titleEn": "Vice President of Qualcomm Technologies, Inc. and President of Qualcomm’s business in Taiwan and South East Asia",
+    "img": "st-liew.jpg",
+    "intro": "現任高通副總裁暨台灣與東南亞區總裁，劉思泰在通訊產業擁有三十年以上領導業務和工程團隊資歷，曾任宏碁股份有限公司自建雲與智慧產品事業總經理，在此之前任職摩托羅拉（Motorola）公司，負責業務與技術管理。"
+},{
+    "nameZh": "彭明義",
+    "nameEn": "Ming-I Peng",
+    "titleZh": "睿能創意股份有限公司產品長",
+    "titleEn": "CPO / Chief Product Officer, Gogoro Inc. / Gogoro Taiwan Limited",
+    "img": "mingi-peng.jpg",
+    "intro": "在電腦軟體、行動通訊與汽車產業擁有超過二十五年的資歷，彭明義將豐富的市場銷售經驗，投注在 Gogoro 產品中，帶入專業與多元的思維。他活躍於 3C 產業，曾經主管 Blackberry 大中華區的行銷與零售，並於 Nokia 掌管 Live 系列手機產品線運作。Nokia 旗下的許多產品，皆是在彭明義擘畫之下於台灣上市。"
 }]
