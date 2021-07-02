@@ -48,7 +48,7 @@ var agenda = [{
     },{
         "nameZh": "林道隆",
         "nameEn": "Steven D. Lin",
-        "titleZh": "<span>思必瑞特生技股分有限公司</span><span>董事長兼任總經理</span>",
+        "titleZh": "<span>思必瑞特生技股份有限公司</span><span>董事長兼任總經理</span>",
         "img": "steven-lin.jpg"
     }]
 },{

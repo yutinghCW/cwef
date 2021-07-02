@@ -22,7 +22,7 @@ var data = [{
 },{
     "nameZh": "林道隆",
     "nameEn": "Steven D. Lin",
-    "titleZh": "思必瑞特生技股分有限公司董事長兼任總經理",
+    "titleZh": "思必瑞特生技股份有限公司董事長兼任總經理",
     "titleEn": "Chairman/General Manager, Spirit Scientific Co., Ltd",
     "img": "steven-lin.jpg",
     "intro": "曾任華盛頓大學附屬醫院擔任急救外科醫師，林道隆具臨床實務經驗，也曾擔任多家國際生技醫療公司的顧問，並曾在國際藥廠輝瑞負責過臨床專案。2007 年受邀參與腎臟科用藥研發，進入台灣寶齡富錦歷經產品開發、臨床、事業發展。之後創立思必瑞特生技，並成功開發 PLT 療程之應用，開始在生醫療領域的布局。林道隆為美國史丹佛大學醫學院畢業。"
@@ -86,7 +86,7 @@ var data = [{
     "nameZh": "彭明義",
     "nameEn": "Ming-I Peng",
     "titleZh": "睿能創意股份有限公司產品長",
-    "titleEn": "CPO / Chief Product Officer, Gogoro Inc. / Gogoro Taiwan Limited",
+    "titleEn": "CPO / Chief Product Officer, Gogoro",
     "img": "mingi-peng.jpg",
     "intro": "在電腦軟體、行動通訊與汽車產業擁有超過二十五年的資歷，彭明義將豐富的市場銷售經驗，投注在 Gogoro 產品中，帶入專業與多元的思維。他活躍於 3C 產業，曾經主管 Blackberry 大中華區的行銷與零售，並於 Nokia 掌管 Live 系列手機產品線運作。Nokia 旗下的許多產品，皆是在彭明義擘畫之下於台灣上市。"
 }]
