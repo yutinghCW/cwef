@@ -3,7 +3,7 @@ a.btn, button.btn {
     border-width: 0;
     &.btn--disabled {
         color: $gray-300 !important;
-        background-color: $gray-500 !important;
+        background-color: $gray-200 !important;
         cursor: not-allowed !important;
     }
     &.btn--blue {

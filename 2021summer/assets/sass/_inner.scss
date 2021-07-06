@@ -1,0 +1,27 @@
+body.inner-page {
+	padding-bottom: calc((1.5 * 1rem * 6) + 40px);
+	min-height: 100%;
+	height: auto;
+	@media (min-width: 325px) {
+		padding-bottom: calc((1.5 * 1rem * 5) + 40px);
+	}
+	@media (min-width: 536px) {
+		padding-bottom: calc((1.5 * 1rem * 4) + 40px);
+	}
+	@media (min-width: 543px) {
+		padding-bottom: calc((1.5 * 1rem * 3) + 40px);
+	}
+	@media (min-width: 1097px) {
+		padding-bottom: calc((1.5 * 1rem * 2) + 40px);
+	}
+	@media (min-width: 1200px) {
+		padding-bottom: calc((1.5 * 1rem * 3) + 40px);
+	}
+	footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+	}
+}

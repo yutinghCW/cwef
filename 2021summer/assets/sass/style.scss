@@ -96,11 +96,15 @@ section {
             }
         }
         &.opening-inner {
-            padding-top: 190px; // +90
-            padding-bottom: 100px;
+            padding-top: 170px; // +90
+            padding-bottom: 80px;
             background-image: url('../images/opening.png');
             @include background-size(cover);
             background-position: center;
+            @include breakpoint(1024px) {
+                padding-top: 190px; // +90
+                padding-bottom: 100px;
+            }
             h1 {
                 color: $black;
                 span {
@@ -346,3 +350,6 @@ section {
 
 @import "_message";
 @import "_card";
+
+@import "_inner";
+@import "_download";

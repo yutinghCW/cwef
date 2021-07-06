@@ -257,6 +257,7 @@ body {
   position: relative;
   min-height: 100%;
   padding-bottom: 76px;
+  line-height: 1.5;
 }
 @media screen and (min-width: 360px) {
   body {
@@ -4680,7 +4681,7 @@ a.btn, button.btn {
 }
 a.btn.btn--disabled, button.btn.btn--disabled {
   color: #909090 !important;
-  background-color: #48545D !important;
+  background-color: #dddddd !important;
   cursor: not-allowed !important;
 }
 a.btn.btn--blue, button.btn.btn--blue {
@@ -5058,14 +5059,20 @@ section.opening.opening-index h2 img {
   }
 }
 section.opening.opening-inner {
-  padding-top: 190px;
-  padding-bottom: 100px;
+  padding-top: 170px;
+  padding-bottom: 80px;
   background-image: url("../images/opening.png");
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
+}
+@media (min-width: 1024px) {
+  section.opening.opening-inner {
+    padding-top: 190px;
+    padding-bottom: 100px;
+  }
 }
 section.opening.opening-inner h1 {
   color: #171717;
@@ -5684,6 +5691,85 @@ section.sponsor .section-title {
   100% {
     background-position: 400px 0;
   }
+}
+body.inner-page {
+  padding-bottom: calc((1.5 * 1rem * 6) + 40px);
+  min-height: 100%;
+  height: auto;
+}
+@media (min-width: 325px) {
+  body.inner-page {
+    padding-bottom: calc((1.5 * 1rem * 5) + 40px);
+  }
+}
+@media (min-width: 536px) {
+  body.inner-page {
+    padding-bottom: calc((1.5 * 1rem * 4) + 40px);
+  }
+}
+@media (min-width: 543px) {
+  body.inner-page {
+    padding-bottom: calc((1.5 * 1rem * 3) + 40px);
+  }
+}
+@media (min-width: 1097px) {
+  body.inner-page {
+    padding-bottom: calc((1.5 * 1rem * 2) + 40px);
+  }
+}
+@media (min-width: 1200px) {
+  body.inner-page {
+    padding-bottom: calc((1.5 * 1rem * 3) + 40px);
+  }
+}
+body.inner-page footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.download-page .container-sm {
+  font-size: 1.125rem;
+}
+.download-page form label {
+  display: block;
+  font-size: 1.125rem;
+}
+.download-page form .input-inline {
+  position: relative;
+}
+.download-page form input[type*='text'],
+.download-page form input[type*='password'] {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 1px solid #909090;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  outline: 0;
+}
+.download-page form i.icon-eye {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#error-text {
+  display: flex;
+  align-items: center;
+  color: #D60C18;
+  font-size: 1rem;
+}
+#error-text > i.icon {
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

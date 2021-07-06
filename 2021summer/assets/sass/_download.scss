@@ -1,0 +1,40 @@
+.download-page {
+	.container-sm {
+		font-size: 1.125rem;
+	}
+	form {
+		label {
+			display: block;
+			font-size: 1.125rem;
+		}
+		.input-inline {
+			position: relative;
+		}
+		input[type*='text'],
+		input[type*='password'] {
+			width: 100%;
+			padding: 10px 40px 10px 15px;
+			font-size: 1rem;
+			line-height: 1.5;
+			border: 1px solid $gray-300;
+			@include border-radius(0);
+			outline: 0;
+		}
+		i.icon-eye {
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			@include translateY(-50%);
+		}
+	}
+}
+
+#error-text {
+	display: flex;
+	align-items: center;
+	color: $primary;
+	font-size: 1rem;
+	> i.icon {
+		margin-right: 5px;
+	}
+}
