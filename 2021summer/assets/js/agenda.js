@@ -29,6 +29,16 @@ var agenda = [{
         "nameEn": "ST Liew",
         "titleZh": "<span>高通副總裁暨</span><span>台灣與東南亞區總裁</span>",
         "img": "st-liew.jpg"
+    },{
+        "nameZh": "林恭正",
+        "nameEn": "James K Lin",
+        "titleZh": "<span>宏碁公司</span><span>筆記型產品事業</span><span>總處長</span>",
+        "img": "james-lin.jpg"
+    },{
+        "nameZh": "鮑永哲",
+        "nameEn": "Raymond Pao",
+        "titleZh": "<span>宏達電 VIVE </span><span>企業解決方案部門</span><span>資深副總經理</span>",
+        "img": "raymond-pao.jpg"
     }]
 },{
     "title": "超前突圍：病毒與人共存的未來",
