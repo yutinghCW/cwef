@@ -380,11 +380,11 @@ img {
 }
 
 .icon-eye:before {
-  content: "";
+  content: "";
 }
 
-.icon-eye-off:before {
-  content: "";
+.icon-eye-slash:before {
+  content: "";
 }
 
 .icon-minus:before {
@@ -5206,6 +5206,9 @@ section.essence .slider-center .slick-slide.slick-center {
 section.about {
   background-color: #f0f0f0;
 }
+section.agenda {
+  border-bottom: 1px solid #dddddd;
+}
 section.agenda .agenda-item {
   border-top: 1px solid #dddddd;
 }
@@ -5375,6 +5378,11 @@ section.agenda .speaker-item .speaker-text p span {
 @media (max-width: 1023px) {
   section.agenda .speaker-item .speaker-text button {
     padding: 5px 25px 7px;
+  }
+}
+@media (max-width: 767px) {
+  section.topic img {
+    max-width: 300px;
   }
 }
 section.addr {

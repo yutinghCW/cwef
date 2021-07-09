@@ -10,8 +10,8 @@ $icon-chevron-down: "\e905";
 $icon-chevron-left: "\e906";
 $icon-chevron-right: "\e907";
 $icon-chevron-up: "\e908";
-$icon-eye: "\e909";
-$icon-eye-off: "\e90a";
+$icon-eye-slash: "\e909";
+$icon-eye: "\e90a";
 $icon-minus: "\e90b";
 $icon-plus: "\e90c";
 $icon-x: "\e90d";
@@ -93,9 +93,9 @@ $icon-x: "\e90d";
 		content: $icon-eye; 
 	}
 }
-.icon-eye-off {
+.icon-eye-slash {
 	&:before {
-		content: $icon-eye-off; 
+		content: $icon-eye-slash; 
 	}
 }
 .icon-minus {

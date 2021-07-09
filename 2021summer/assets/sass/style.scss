@@ -121,6 +121,7 @@ section {
         background-color: $gray;
     }
     &.agenda {
+        border-bottom: 1px solid $gray-200;
         .agenda-item {
             border-top: 1px solid $gray-200;
         }
@@ -262,6 +263,13 @@ section {
             }
         }
 
+    }
+    &.topic {
+        img {
+            @include breakpoint(max-width 767px) {
+                max-width: 300px;
+            }
+        }
     }
     &.addr {
         background-color: $yellow;

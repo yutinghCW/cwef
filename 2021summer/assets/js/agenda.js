@@ -75,7 +75,7 @@ var agenda = [{
     "speaker": [{
         "nameZh": "蘇奧然",
         "nameEn": "Oliver Su",
-        "titleZh": "<span>德載國際不動產</span><span>創辦人與產品長</span>",
+        "titleZh": "<span>德載國際不動產</span><span>產品長兼共同創辦人</span>",
         "img": "oliver-su.jpg"
     },{
         "nameZh": "陳星豪",
