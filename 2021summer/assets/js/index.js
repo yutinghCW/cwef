@@ -27,16 +27,6 @@ $(function () {
             this.removeEventListener('touchstart', videoStart);
 		});
 	}
-	if (width < 930) {
-		$('.hamburger').click(function(){
-			$(this).toggleClass('active');
-			$('header > .container > nav').fadeToggle();
-		});
-		$('header > .container > nav > ul > li > a').click(function(){
-			$('.hamburger').removeClass('active');
-			$('header > .container > nav').fadeOut();
-		});
-	}
 	$('.slider-center').slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
