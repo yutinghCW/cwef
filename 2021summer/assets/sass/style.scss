@@ -207,8 +207,8 @@ section {
             }
             &.agenda-img-verticle {
                 position: relative;
-                // height: 485px;
-                height: 375px;
+                height: 485px;
+                // height: 375px;
                 @include breakpoint(1200px) {
                     height: 400px;
                 }
