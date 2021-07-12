@@ -5310,11 +5310,11 @@ section.agenda .agenda-img.agenda-img-main::before {
 }
 section.agenda .agenda-img.agenda-img-verticle {
   position: relative;
-  height: 485px;
+  height: 425px;
 }
 @media (min-width: 1200px) {
   section.agenda .agenda-img.agenda-img-verticle {
-    height: 400px;
+    height: 485px;
   }
 }
 @media (max-width: 1023px) {
