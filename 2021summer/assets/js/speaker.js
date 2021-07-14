@@ -79,7 +79,7 @@ var data = [{
     "nameZh": "劉思泰",
     "nameEn": "ST Liew",
     "titleZh": "高通副總裁暨台灣與東南亞區總裁",
-    "titleEn": "Vice President of Qualcomm Technologies, Inc. and President of Qualcomm’s business in Taiwan and South East Asia",
+    "titleEn": "Vice President and President of Qualcomm Taiwan and South East Asia",
     "img": "st-liew.jpg",
     "intro": "現任高通副總裁暨台灣與東南亞區總裁，劉思泰在通訊產業擁有三十年以上領導業務和工程團隊資歷，曾任宏碁股份有限公司自建雲與智慧產品事業總經理，在此之前任職摩托羅拉（Motorola）公司，負責業務與技術管理。"
 },{
