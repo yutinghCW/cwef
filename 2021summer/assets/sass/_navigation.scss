@@ -73,7 +73,7 @@ header {
 		width: 30px;
 		height: 25px;
 		z-index: 5;
-		@include breakpoint(930px) {
+		@include breakpoint(1024px) {
 			display: none;
 		}
 		span {
@@ -114,7 +114,7 @@ header {
 	nav {
 		font-size: 0;
 		z-index: 3;
-		@include breakpoint(max-width 929px) {
+		@include breakpoint(max-width 1023px) {
 			display: none;
 			position: fixed;
 			top: 0;
@@ -127,13 +127,13 @@ header {
 		ul {
 			@include list(0, 0, none);
 			li {
-				@include breakpoint(max-width 929px) {
+				@include breakpoint(max-width 1023px) {
 					margin-bottom: 25px;
 					&:last-child {
 						display: none;
 					}
 				}
-				@include breakpoint(930px) {
+				@include breakpoint(1024px) {
 					display: inline-block;
 					margin-left: 20px;
 				}
@@ -142,7 +142,7 @@ header {
 				}
 				a {
 					font-size: 1.125rem;
-					@include breakpoint(930px) {
+					@include breakpoint(1024px) {
 						font-size: 1rem;
 					}
 					&.btn {

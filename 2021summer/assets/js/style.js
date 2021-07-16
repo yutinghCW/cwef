@@ -16,7 +16,7 @@ $(function () {
 		}
 	});
 
-	if (width < 930) {
+	if (width < 1024) {
 		$('.hamburger').click(function(){
 			$(this).toggleClass('active');
 			$('header > .container > nav').fadeToggle();
@@ -31,7 +31,7 @@ $(function () {
 		$(this).siblings('input').attr('type',
 			$(this).siblings('input').attr('type')==='password'?'text':'password'
 		);
-		$(this).toggleClass('icon-eyeon icon-eyeoff');
+		$(this).toggleClass('icon-eye icon-eye-slash');
 	});
 
 	$(window).on("scroll", function () {

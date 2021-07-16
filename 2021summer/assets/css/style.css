@@ -380,11 +380,11 @@ img {
 }
 
 .icon-eye:before {
-  content: "";
+  content: "";
 }
 
 .icon-eye-slash:before {
-  content: "";
+  content: "";
 }
 
 .icon-minus:before {
@@ -4805,7 +4805,7 @@ header .hamburger {
   height: 25px;
   z-index: 5;
 }
-@media (min-width: 930px) {
+@media (min-width: 1024px) {
   header .hamburger {
     display: none;
   }
@@ -4854,7 +4854,7 @@ header nav {
   font-size: 0;
   z-index: 3;
 }
-@media (max-width: 929px) {
+@media (max-width: 1023px) {
   header nav {
     display: none;
     position: fixed;
@@ -4871,7 +4871,7 @@ header nav ul {
   padding: 0;
   list-style: none;
 }
-@media (max-width: 929px) {
+@media (max-width: 1023px) {
   header nav ul li {
     margin-bottom: 25px;
   }
@@ -4879,7 +4879,7 @@ header nav ul {
     display: none;
   }
 }
-@media (min-width: 930px) {
+@media (min-width: 1024px) {
   header nav ul li {
     display: inline-block;
     margin-left: 20px;
@@ -4893,7 +4893,7 @@ header nav ul {
 header nav ul li a {
   font-size: 1.125rem;
 }
-@media (min-width: 930px) {
+@media (min-width: 1024px) {
   header nav ul li a {
     font-size: 1rem;
   }
