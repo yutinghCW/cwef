@@ -11,7 +11,7 @@ $icon-chevron-left: "\e906";
 $icon-chevron-right: "\e907";
 $icon-chevron-up: "\e908";
 $icon-eye-slash: "\e90a";
-$icon-eye: "\e909";
+$icon-eye-on: "\e909";
 $icon-minus: "\e90b";
 $icon-plus: "\e90c";
 $icon-x: "\e90d";
@@ -88,9 +88,9 @@ $icon-x: "\e90d";
 		content: $icon-chevron-up; 
 	}
 }
-.icon-eye {
+.icon-eye-on {
 	&:before {
-		content: $icon-eye; 
+		content: $icon-eye-on; 
 	}
 }
 .icon-eye-slash {

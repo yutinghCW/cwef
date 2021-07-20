@@ -31,7 +31,7 @@ $(function () {
 		$(this).siblings('input').attr('type',
 			$(this).siblings('input').attr('type')==='password'?'text':'password'
 		);
-		$(this).toggleClass('icon-eye icon-eye-slash');
+		$(this).toggleClass('icon-eye-on icon-eye-slash');
 	});
 
 	$(window).on("scroll", function () {
